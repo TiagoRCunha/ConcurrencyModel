@@ -5,28 +5,28 @@ import java.util.concurrent.locks.ReentrantLock;
 
 import java.util.Random;
 
-class PhilosopherCondition extends Thread {
+class Philosopher extends Thread {
 
   private boolean eating;
-  private PhilosopherCondition left;
-  private PhilosopherCondition right;
+  private Philosopher left;
+  private Philosopher right;
   private ReentrantLock table;
   private Condition condition;
   private Random random;
   private int thinkCount;
 
-  public PhilosopherCondition(ReentrantLock table) {
+  public Philosopher(ReentrantLock table) {
     eating = false;
     this.table = table;
     condition = table.newCondition();
     this.random = new Random();
   }
 
-  public void setLeft(PhilosopherCondition left) {
+  public void setLeft(Philosopher left) {
     this.left = left;
   }
 
-  public void setRight(PhilosopherCondition right) {
+  public void setRight(Philosopher right) {
     this.right = right;
   }
 

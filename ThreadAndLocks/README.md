@@ -68,6 +68,14 @@ and there is a small chance to output:
 
 ### Philosopher
 
+For this day, this exercise has two version, which you can switch to:
+
+`git checkout chap2-dining-philosophers`
+
+Then:
+
+`git checkout chap2-dining-philosophers-fixed`
+
 ### Downloader
 
 ## Day 2

@@ -23,12 +23,8 @@ class Downloader extends Thread {
     listeners.remove(listener);
   }
 
-  private void updateProgress(int n) {
-    ArrayList<ProgressListener> listenersCopy;
-    synchronized (this) {
-      listenersCopy = (ArrayList<ProgressListener>) listeners.clone();
-    }
-    for (ProgressListener listener : listenersCopy)
+  private synchronized void updateProgress(int n) {
+    for (ProgressListener listener : listeners)
       listener.onProgress(n);
   }
 

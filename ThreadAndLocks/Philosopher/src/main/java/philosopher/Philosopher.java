@@ -19,7 +19,7 @@ class Philosopher extends Thread {
     eating = false;
     this.table = table;
     condition = table.newCondition();
-    this.random = new Random();
+    random = new Random();
   }
 
   public void setLeft(Philosopher left) {

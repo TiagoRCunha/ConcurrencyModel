@@ -1,7 +1,5 @@
 package downloader;
 
-public interface ProgressListener {
-
-  void onProgress(int n);
-
+interface ProgressListener {
+  void onProgress(int current);
 }

@@ -2,33 +2,29 @@ package downloader;
 
 import java.io.*;
 import java.net.URL;
-import java.util.ArrayList;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 class Downloader extends Thread {
   private InputStream in;
   private OutputStream out;
-  private ArrayList<ProgressListener> listeners;
+  private CopyOnWriteArrayList<ProgressListener> listeners;
 
   public Downloader(URL url, String outputFilename) throws IOException {
     in = url.openConnection().getInputStream();
     out = new FileOutputStream(outputFilename);
-    listeners = new ArrayList<ProgressListener>();
+    listeners = new CopyOnWriteArrayList<ProgressListener>();
   }
 
-  public synchronized void addListener(ProgressListener listener) {
+  public void addListener(ProgressListener listener) {
     listeners.add(listener);
   }
 
-  public synchronized void removeListener(ProgressListener listener) {
+  public void removeListener(ProgressListener listener) {
     listeners.remove(listener);
   }
 
   private void updateProgress(int n) {
-    ArrayList<ProgressListener> listenersCopy;
-    synchronized (this) {
-      listenersCopy = (ArrayList<ProgressListener>) listeners.clone();
-    }
-    for (ProgressListener listener : listenersCopy)
+    for (ProgressListener listener : listeners)
       listener.onProgress(n);
   }
 

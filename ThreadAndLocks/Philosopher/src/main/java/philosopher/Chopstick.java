@@ -1,15 +1,13 @@
 package philosopher;
 
-public class Chopstick {
+class Chopstick {
+	private int id;
 
-  int id = 0;
+	public Chopstick(int id) {
+		this.id = id;
+	}
 
-  public Chopstick(int id) {
-    this.id = id;
-  }
-
-  public int getId() {
-    return this.id;
-  };
-
+	public int getId() {
+		return id;
+	}
 }

@@ -20,11 +20,25 @@ Run the project: `gradle run`
 
 The first program, there is only one version.
 
+There is a chance to output:
+
+```
+Hello from new thread
+Hello from main thread
+```
+
+And a chance to output:
+
+```
+Hello from main thread
+Hello from new thread
+```
+
 ### Counting
 
 #### Switching between versions
 
-This exercice has three version, the first two versions you can set by switching the branch:
+This exercise has three version, the first two versions you can set by switching the branch:
 
 `git checkout chap2-counting-race`
 
@@ -37,6 +51,20 @@ then:
 Every time you run the project the output will be `20000`
 
 ### Puzzle
+
+This exercise has one version. Just guarantee that you are in the master branch.
+
+Sometimes the output will be:
+
+`The meaning of life is: 42`
+
+and sometimes will be:
+
+`I don't know the answer`
+
+and there is a small chance to output:
+
+`The meaning of life is: 0`
 
 ### Philosopher
 

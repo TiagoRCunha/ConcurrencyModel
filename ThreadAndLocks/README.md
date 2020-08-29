@@ -36,8 +36,6 @@ Hello from new thread
 
 ### Counting
 
-#### Switching between versions
-
 This exercise has three version, the first two versions you can set by switching the branch:
 
 `git checkout chap2-counting-race`
@@ -77,6 +75,14 @@ Then:
 `git checkout chap2-dining-philosophers-fixed`
 
 ### Downloader
+
+For day 1, this exercise has two version, which you can switch to:
+
+`git checkout chap2-downloader`
+
+Then:
+
+`git checkout chap2-downloader-fixed`
 
 ## Day 2
 

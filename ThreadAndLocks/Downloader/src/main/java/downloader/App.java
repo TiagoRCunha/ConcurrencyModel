@@ -7,12 +7,10 @@ import java.net.URL;
 public class App {
   public static void main(String[] args) throws MalformedURLException {
     URL url = new URL("http://www.google.com/");
-    // Downloader downloader = new Downloader(url, "test.txt");
-    // downloader.run();
 
     DownloaderBetter dwder;
     try {
-      dwder = new DownloaderBetter(url, "text.html");
+      dwder = new DownloaderBetter(url, "test.html");
       dwder.run();
     } catch (IOException e) {
       e.printStackTrace();

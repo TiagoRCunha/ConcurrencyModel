@@ -1,5 +1,7 @@
 # Ignore Gradle project-specific cache directory
 .gradle
+
+# Ignore auto-generate files
 .settings
 .classpath
 .project
@@ -12,3 +14,7 @@ bin
 
 # Ignore the dump of wikipedia
 enwiki.xml
+
+# Ignore test from downloader
+
+test.html

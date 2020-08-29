@@ -1,7 +1,5 @@
 package echoserver;
 
-import java.util.concurrent.Executors;
-import java.util.concurrent.ExecutorService;
 import java.io.InputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -35,11 +33,10 @@ public class EchoServer {
     }
 
     ServerSocket server = new ServerSocket(4567);
-    int threadPoolSize = Runtime.getRuntime().availableProcessors() * 2;
-    ExecutorService executor = Executors.newFixedThreadPool(threadPoolSize);
     while (true) {
       Socket socket = server.accept();
-      executor.execute(new ConnectionHandler(socket));
+      Thread handler = new Thread(new ConnectionHandler(socket));
+      handler.start();
     }
   }
 }

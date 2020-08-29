@@ -1,33 +1,35 @@
-# About this chapter
+# Sobre este capítulo
 
-Threads and locks is the fundation of concurrency programming, and these examples represent some problems and features of using Threads, specifically with Java.utils.concurrency library
+_Threads and locks_ são a fundação da programação conconrrente, e esses exemplos representam alguns problemas e recursos em usar _threads_, específicamente com a biblioteca `Java.utils.concurrency`
 
 Jump to: [Day 2](#Day-2), [Day 3](#Day-3)
 
-# How to run projects
+Leia este documento em: [English](./README.en.md)
 
-This path was build with groovy and gradle, so you could download [gradle](https://gradle.org/install/).
+# Como rodar os projetos
 
-You can build all modules (exemples) at once, enter in this path `cd ConcurrencyModels/ThreadAndLocks` and just use the command `gradle build`
+Esta pasta foi criada com _groovy_ e _gradle_, então você poderia baixar o [gradle](https://gradle.org/install/).
 
-Enter the project: `cd ThreadAndLocks/<project-name>/`
+Você pode buildar todos os módulos (exemplos) de uma vez, entre neste caminho `cd ConcurrencyModels/ThreadAndLocks` e simplesmete use o comando `gradle build`
 
-Run the project: `gradle run`
+Entre no projeto: `cd ThreadAndLocks/<nome-do-projeto>/`
 
-## Day 1
+Rode o projeto: `gradle run`
+
+## Dia 1
 
 ### HelloWorld
 
-The first program, there is only one version.
+O primeiro programa, tem apenas uma versão.
 
-There is a chance to output:
+Existe uma chance de saída:
 
 ```
 Hello from new thread
 Hello from main thread
 ```
 
-And a chance to output:
+E uma chance de saída:
 
 ```
 Hello from main thread
@@ -36,128 +38,128 @@ Hello from new thread
 
 ### Counting
 
-This exercise has three version, the first two versions you can set by switching the branch:
+Este exercício tem 3 versões, as duas primeira podem ser usadas por trocar para a _branch_:
 
 `git checkout chap2-counting-race`
 
-Each time you run the project the output changes
+Cada vez que você rodar o projeto a saída muda
 
-then:
+E depois:
 
 `git checkout chap2-counting-synchronized`
 
-Every time you run the project the output will be `20000`
+Toda vez que você rodar o projeto a saída será `20000`
 
 ### Puzzle
 
-This exercise has one version. Just guarantee that you are in the master branch.
+Este exercício tem uma versão. Apenas garanta que você está na _branch_ _master_.
 
-Sometimes the output will be:
+As vezes a saída será:
 
 `The meaning of life is: 42`
 
-and sometimes will be:
+E as vezes será:
 
 `I don't know the answer`
 
-and there is a small chance to output:
+E existe uma chance pequena da saida ser:
 
 `The meaning of life is: 0`
 
 ### Philosopher
 
-For this day, this exercise has two version, which you can switch to:
+Para este dia, o exercício tem duas versões, você pode mudar para:
 
 `git checkout chap2-dining-philosophers`
 
-Then:
+E então:
 
 `git checkout chap2-dining-philosophers-fixed`
 
 ### Downloader
 
-For day 1, this exercise has two version, which you can switch to:
+Para o dia 1, este exercício tem duas versões, no qual você pode trocar por:
 
 `git checkout chap2-downloader`
 
-Then:
+E então:
 
 `git checkout chap2-downloader-fixed`
 
-both will generate a file `test.html`
+os dois vão gerar um arquivo `test.html`
 
-## Day 2
+## Dia 2
 
-[:top:](#About-this-chapter)
+[:top:](#Sobre-este-capítulo)
 
 ### Uninterrputible
 
-This exercise has one version, so you can continue in the branch master.
+Este exercício tem uma versão, então você pode continuar na _branch_ _master_.
 
 ### Interrputible
 
-Same as the last one
+O mesmo que o de cima
 
-### Philosopher (better)
+### Philosopher (melhor)
 
-Now you can switch to another version of Philosopher exercise, first is with time out:
+Agora você pode mudar para outra versão do exercício _Philosopher_, primeiro com _timeout_:
 
 `git checkout chap2-dining-philosophers-time-out`
 
-Then: (this version will appear after ConcurrentSortedList)
+E então: (Esta versão irá aparecer depois de _ConcurrentSortedList_)
 
 `git checkout chap2-dining-philosophers-condition`
 
 ### ConcurrentSortedList
 
-This exercise has one version, so you can continue in the branch master
+Este exercício tem uma versão, você pode continuar na _branch_ _master_
 
-### Counting (better)
+### Counting (melhor)
 
-Another version of the Counting exercise, but with atomic variables
+Outra versão do exercício _Counting_, mas com variáveis atômicas
 
 `git checkout chap2-counting-atomic-variable`
 
-## Day 3
+## Dia 3
 
-[:top:](#About-this-chapter)
+[:top:](#Sobre-este-capítulo)
 
 ### EchoServer
 
-This exercise has two versions, to switch version check below:
+Este exercício tem duas versões, para mudar a versão olhe abaixo:
 
 `git checkout chap2-echo-server`
 
-Then:
+E então:
 
-`git checkout chap2-echo-server-better` (or use the code in master branch)
+`git checkout chap2-echo-server-better` (ou use o código que está na _master_)
 
-### Downloader (better)
+### Downloader (melhor)
 
-The same project at day one, but with a Java standard library resource:
+O mesmo projeto do dia um, porém com um recurso da biblioteca padrão do Java:
 
 `git checkout chap2-downloader-better`
 
 ### WordCount
 
-This exercice require the dump of wikipedia database in xml that you can download [here](http://dumps.wikimedia.org/enwiki/) (its about 17Gb - 40Gb).
+Este exercício requer um _dump_ do banco de dados do _wikipedia_ em xml que pode ser baixado [aqui](http://dumps.wikimedia.org/enwiki/) (é por volta de 17Gb - 40Gb).
 
-After that, unzip the xml file in `ThreadAndLocks/WordCount`, and rename to `enwiki.xml`
+Depois disto, desempacote o arquivo xml em `ThreadAndLocks/WordCount`, e renomeie para `enwiki.xml`
 
-This is the last exercise of this chapition, and it has four version:
+Este é o ultimo exercício deste capítulo, e tem quatro versões:
 
-`git checkout chap2-word-count-producer-consumer` (In my machine this test cost 3m 22s)
+`git checkout chap2-word-count-producer-consumer` (Na minha máquina custou 3m 22s)
 
-then:
+Então:
 
-`git checkout chap2-word-count-synchronized-hash-map` (In my machine this test cost 4m 20s)
+`git checkout chap2-word-count-synchronized-hash-map` (Na minha máquina este teste custou 4m 20s)
 
-then:
+E então:
 
 `git checkout chap2-word-count-concurrent-hash-map` (1m 32s :astonished:)
 
-and to end:
+E pra terminar:
 
 `git checkout chap2-word-count-bash-concurrent` (1m 13s :sunglasses:)
 
-try to test different numbers of counters in line 11 of `WordCount.java`
+Tente testar com números deferentes de _counters_ na linha `11` de `WordCount.java`

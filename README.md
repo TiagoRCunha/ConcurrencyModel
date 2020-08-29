@@ -1,13 +1,20 @@
-# Concurrency Models
+# Concurrency Model
 
-This repository is a module that contains the exercises for each chapter of the book "Seven concurrency models in seven weeks". Each directory contains the README with the struction with how to run the exercises.
+Este repositório é um módulo que contem os exercícios para cada capítulo do livro "Seven concurrency models in seven weeks". Cada diretório contem um README com as instruções de como rodar os exercícios.
 
-<!-- if you are already in vscode press ctrl shift v) -->
+<!-- Se já estiver no vscode aperte ctrl+shift+v) -->
 
-# About the book
+> - mantenedor [@TiagoRCunha](https://github.com/TiagoRCunha/)
+> - versão 1
 
-The book was written to cover 3 days each chapter, so it will have day one, two, and three.
+Este documento em: [English](./README.en.md)
+
+# Sobre o livro
+
+Este livro foi escrito com o intúito de cobrir 3 dias para cada capítulo.
+
+Você pode ter acesso a isto [aqui](https://drive.google.com/file/d/1mivjNbSEddjKZ5inf1K3JxF8-AR7PtfK/view)
 
 ## ThreadAndLocks
 
-This chapter uses Java as the main language to the examples
+Este capítulo usa Java como linguagem principal para os exemplos, você pode ir [aqui](./ThreadAndLocks/README.md) para saber como rodar os exemplos.

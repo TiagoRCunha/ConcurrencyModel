@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 public class WordCount {
 
-  private static final int NUM_COUNTERS = 2;
+  private static final int NUM_COUNTERS = 4;
 
   public static void main(String[] args) throws Exception {
     ArrayBlockingQueue<Page> queue = new ArrayBlockingQueue<Page>(100);

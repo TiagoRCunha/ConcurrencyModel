@@ -5,13 +5,11 @@ import java.util.concurrent.locks.ReentrantLock;
 public class App {
   public static void main(String[] args) {
 
-    ReentrantLock table = new ReentrantLock();
+    ReentrantLock leftLock = new ReentrantLock();
+    ReentrantLock rightLock = new ReentrantLock();
 
-    Philosopher philosopher = new Philosopher(table);
-    philosopher.setLeft(philosopher);
-    philosopher.setRight(philosopher);
-
-    philosopher.run();
+    Philosopher philosopherTimeOut = new Philosopher(leftLock, rightLock);
+    philosopherTimeOut.run();
 
   }
 }

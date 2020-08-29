@@ -84,19 +84,39 @@ Then:
 
 `git checkout chap2-downloader-fixed`
 
+both will generate a file `test.html`
+
 ## Day 2
 
 [:top:](#About-this-chapter)
 
 ### Uninterrputible
 
+This exercise has one version, so you can continue in the branch master.
+
 ### Interrputible
+
+Same as the last one
 
 ### Philosopher (better)
 
+Now you can switch to another version of Philosopher exercise, first is with time out:
+
+`git checkout chap2-dining-philosophers-time-out`
+
+Then: (this version will appear after ConcurrentSortedList)
+
+`git checkout chap2-dining-philosophers-condition`
+
 ### ConcurrentSortedList
 
+This exercise has one version, so you can continue in the branch master
+
 ### Counting (better)
+
+Another version of the Counting exercise, but with atomic variables
+
+`git checkout chap2-counting-atomic-variable`
 
 ## Day 3
 
@@ -104,28 +124,40 @@ Then:
 
 ### EchoServer
 
-#### run the project
+This exercise has two versions, to switch version check below:
 
-Enter the project: `cd ThreadAndLocks/HelloWorld/`
+`git checkout chap2-echo-server`
 
-Run the project: `gradle run`
+Then:
+
+`git checkout chap2-echo-server-better` (or use the code in master branch)
 
 ### Downloader (better)
 
-#### run the project
+The same project at day one, but with a Java standard library resource:
 
-Enter the project: `cd ThreadAndLocks/HelloWorld/`
-
-Run the project: `gradle run`
+`git checkout chap2-downloader-better`
 
 ### WordCount
 
-This exercice require the dump of wikipedia database in xlm that you can download [here](http://dumps.wikimedia.org/enwiki/) (its about 17Gb - 40Gb).
+This exercice require the dump of wikipedia database in xml that you can download [here](http://dumps.wikimedia.org/enwiki/) (its about 17Gb - 40Gb).
 
 After that, unzip the xml file in `ThreadAndLocks/WordCount`, and rename to `enwiki.xml`
 
-#### run the project
+This is the last exercise of this chapition, and it has four version:
 
-Enter the project: `cd ThreadAndLocks/HelloWorld/`
+`git checkout chap2-word-count-producer-consumer` (In my machine this test cost 3m 22s)
 
-Run the project: `gradle run`
+then:
+
+`git checkout chap2-word-count-synchronized-hash-map` (In my machine this test cost 4m 20s)
+
+then:
+
+`git checkout chap2-word-count-concurrent-hash-map` (1m 32s :astonished:)
+
+and to end:
+
+`git checkout chap2-word-count-bash-concurrent` (1m 13s :sunglasses:)
+
+try to test different numbers of counters in line 11 of `WordCount.java`

@@ -1,3 +1,6 @@
+# Ignore vscode workspace settings
+.vscode
+
 # Ignore Gradle project-specific cache directory
 .gradle
 
@@ -7,6 +10,12 @@
 .project
 gradlew
 gradlew.bat
+pom.xml
+pom.xml.asc
+
+# Ignore compiled files 
+*.jar
+*.class
 
 # Ignore Gradle build output directory
 build
@@ -18,3 +27,18 @@ enwiki.xml
 # Ignore test from downloader
 
 test.html
+
+# Clojure project default template ignored files
+
+FunctionalProgramming/**/target/
+FunctionalProgramming/**/classes/
+FunctionalProgramming/**/checkouts/
+FunctionalProgramming/**/profiles.clj
+FunctionalProgramming/**/.lein-*
+FunctionalProgramming/**/.nrepl-port
+FunctionalProgramming/**/.hgignore
+FunctionalProgramming/**/.hg/
+FunctionalProgramming/**/test/
+
+## calva extension output file
+FunctionalProgramming/**/.calva/
